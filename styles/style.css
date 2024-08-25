@@ -1,0 +1,188 @@
+:root {
+    --fuenteH: 'Crimson Text', sans-serif;
+    --fuenteParrafo: 'Roboto Flex', sans-serif;
+    --colorPrimario: #6287f8;
+    --colorSecundario: #9D72DF;
+    --blanco:#FFFFFF;
+    --negro: #000000;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuenteParrafo);
+    font-size: 1.6rem;
+    line-height: 2;
+    margin: 0;
+}
+
+h1,h2,h3 {
+    font-family: var(--fuenteH);
+}
+
+h2 {
+    text-align:center;
+    font-size: 3rem;
+    margin: 2rem 0 0 0;
+}
+
+textarea {
+    resize: none;
+    font-family: var(--fuenteParrafo);
+    font-size: 1.6rem;
+    border-radius: 0.7rem;
+    border-width: 0.2rem;
+    border-color: var(--colorSecundario);
+    margin-top: 3rem;
+}
+
+button{
+    border-radius: .5rem;
+    text-align: center;
+    border: none;
+    background-color: var(--colorSecundario);
+    padding: 1rem 1.5rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--colorSecundario);
+    background-color: var(--negro);
+}
+
+/**HEADER**/
+.header{
+    display: flex;
+    justify-content:center;
+    background-color:  var(--colorPrimario);
+}
+
+.header__logo{
+    padding-top: 2.5rem;
+}
+
+.header__titulo{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/**MAIN**/
+.contenedor{
+    margin: 0 auto;
+    max-width: 120rem;
+    width: 95%;
+}
+
+.introduccionParrafo{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3.2rem;
+}
+
+.margen{
+    box-shadow: 0px 5px 12px 8px rgba(158, 114, 223, 0.973);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1.2rem;
+}
+
+.contenido{
+    display: flex;
+    justify-content: space-evenly;
+    gap:2rem;
+}
+
+.contenido__input{
+    width: 35rem;
+    height: 35rem;
+}
+
+.aviso{
+    display: flex;
+    gap:1rem;
+    margin-left: 1rem;
+}
+
+.aviso__icono{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.aviso__texto{
+    margin:0 0 1.6rem 0;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenido__output{
+    background-image: url("/img/candado.png");
+    background-repeat: no-repeat;
+    height: 50rem;
+    width: 30rem;
+    background-size: contain;
+    background-position: center;
+}
+
+.copiar{
+    display: flex;
+    justify-content: center;
+}
+
+/**FOOTER**/
+.footer{
+    background-color:  var(--colorPrimario);
+    margin-top: 5rem;
+    padding: 1rem;
+}
+
+.footer p{
+    text-align: center;
+    line-height: 1rem;
+    font-weight: bold;
+}
+
+.footer__iconos{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+}
+
+.footer__iconos img{
+    height: 2rem;
+    width: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contenido{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenido__input{
+        max-height: 30rem;
+        max-width: 30rem;
+    }
+    .contenido__output{
+        max-height: 20rem;
+        max-width:30rem;
+    }
+    .header{
+        flex-direction: column;
+        align-items: center;
+        background-color:  var(--colorPrimario);
+    }
+}

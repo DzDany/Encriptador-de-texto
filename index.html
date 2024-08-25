@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <meta name="description" content="Página web para encriptar y desencriptar texto"><!--Descripción breve de la página web-->
+    <!--Preload-->
+    <link rel="preload" href="./styles/normalize.css" as="style">
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="./styles/style.css" as="style">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="./img/Logo.png" alt="Logo de Alura">
+        </a>
+        <h1 class="header__titulo">Challenge - Encriptador de Texto</h1>
+    </header>
+
+    <main class="contenedor">
+        <h2>¿De qué trata?</h2>
+        <p class="introduccionParrafo">Este un encriptador/desencriptador de texto, el cual forma parte del Challenge de Alura Latam, donde se ponen a prueba conocimientos adquiridos a lo largo de esta jornada, tales como el manejo de diversas tecnologías como JavaScript, HTML, y CSS, además del uso de Git y GitHub. Es un criterio importante para avanzar a la siguiente fase de esta increíble experiencia de aprendizaje. Espero lo disfrutes:)</p>
+        <div class="margen">
+            <h2>Encriptador / Desencriptador</h2>
+            <div class="contenido">
+                <section>
+                    <textarea class="contenido__input" placeholder="Escribe algo..."></textarea>
+                    <div class="aviso">
+                        <img src="./img/alerta.png" alt="Icono de importante" class="aviso__icono">
+                        <h6 class="aviso__texto">Sólo letras minúsculas y sin caracteres especiales</h6>
+                    </div>
+                    <div class="botones">
+                        <button onclick="btnEncriptar();">Encriptar</button>
+                        <button onclick="btnDesencriptar();">Desencriptar</button>
+                        <button onclick="limpiar();">Limpiar</button>
+                    </div>
+                </section>
+                <section>
+                    <textarea readonly class="contenido__output"></textarea>
+                    <div class="copiar">
+                        <button onclick="copiar();">Copiar</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer class="footer">
+        <p>Daniel Díaz, 2024</p>
+        <p>Sígueme en mis redes</p>
+        <div class="footer__iconos">
+            <a href="https://github.com/DzDany">
+                <img src="./img/github-logo_icon-icons.com_73546.png" alt="Icono de GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-diaz-alvarado/">
+                <img src="./img/linkedin_black_logo_icon_147114.png" alt="Icono de LinkedIn">
+            </a>
+        </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
